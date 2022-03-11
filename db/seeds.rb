@@ -7,7 +7,15 @@
 #   Character.create(name: "Luke", movie: movies.first)
 Task.destroy_all
 
-Task.create(name:'Get up',         date: '2022-03-12 06:00:00' , points:50)
-Task.create(name:'Breakfast',      date: '2022-03-12 06:30:00' , points:50)
-Task.create(name:'Work out',       date: '2022-03-21 07:00:00' , points:50)
-Task.create(name:'Get dressed',    date: '2022-03-21 07:30:00' , points:50)
+t1 = Task.create(name:'Get up',         date: '2022-03-12 06:00:00' , points:50)
+t2 = Task.create(name:'Breakfast',      date: '2022-03-12 06:30:00' , points:50)
+t3 = Task.create(name:'Work out',       date: '2022-03-21 07:00:00' , points:50)
+t4 = Task.create(name:'Get dressed',    date: '2022-03-21 07:30:00' , points:50)
+
+t1.Objectives.create(name:'turn on the tea pot')
+t1.Objectives.create(name:'wash dishes')
+t1.Objectives.create(name:'do all exercises')
+t1.Objectives.create(name:'shave and shower' )
+
+puts "Task: #{Task.all.size}" 
+puts "objectives: #{Objective.all.size}" 
