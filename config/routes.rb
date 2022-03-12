@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
   namespace :api do
 
+    get    'tasks_all/:id',      to: 'tasks#task_all'
     get    'tasks',              to: 'tasks#index'
     get    'tasks/:id',          to: 'tasks#show'
     post   'tasks',              to: 'tasks#create'
