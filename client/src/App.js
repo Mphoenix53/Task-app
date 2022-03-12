@@ -6,8 +6,9 @@ function App() {
   return (
     <div className="App">
       <nav>
-        <Link to='/'>Home</Link>{'~~'}
-        <Link to='/task'>Task</Link>{''}
+        <Link to='/'>Home</Link>{' -- '}
+        <Link to='/task'>Task</Link>{' -- '}
+        <Link to='/about'>About</Link>{''}
       </nav>
       <Outlet />
     </div>

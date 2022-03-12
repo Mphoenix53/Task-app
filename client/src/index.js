@@ -8,12 +8,14 @@ import Home from './pages/Home';
 import Task from './pages/Task';
 import Task_Show from './TaskShow';
 import Task_Form from './pages/TaskForm';
+import About from './pages/About';
 
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<Home />} />
+        <Route path='about' element={<About />} />
         <Route path='task' element={<Task />} />
         <Route path='task/:id' element={<Task_Show/>} />
         <Route path='task/new' element={<Task_Form/>} />
