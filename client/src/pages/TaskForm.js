@@ -1,10 +1,13 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
-const TaskForm = ()=> {
+const Task_Form = ()=> {
+  const params = useParams()
   return (
     <div>
-      <h1>TaskForm</h1>
+      <h1>{params.id ? 'Edit' : 'New'} Task Form</h1>
+      <p>ID: {params.id ? params.id : 'NO ID'}</p>
     </div>
   )
 }
-export default TaskForm
+export default Task_Form

@@ -3,11 +3,28 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter} from 'react-router-dom'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Home from './pages/Home';
+import Task from './pages/Task';
+import Task_Show from './TaskShow';
+import Task_Form from './pages/TaskForm';
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <Routes>
+      <Route path="/" element={<App />}>
+        <Route index element={<Home />} />
+        <Route path='task' element={<Task />} />
+        <Route path='task/:id' element={<Task_Show/>} />
+        <Route path='task/new' element={<Task_Form/>} />
+        <Route path='task/:id/edit' element={<Task_Form/>} />
+          {/*<Route path="teams" element={<Teams />}>
+          <Route path=":teamId" element={<Team />} />
+          <Route path="new" element={<NewTeamForm />} />
+          <Route index element={<LeagueStandings />} /> 
+        </Route>*/}
+      </Route>
+    </Routes>
   </BrowserRouter>,
   document.getElementById('root')
 );
