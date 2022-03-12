@@ -4,7 +4,6 @@ class Api::ObjectivesController < ApplicationController
 
 
   def index
-    @task = Task.find(params[:task_id])
     render json: @task.objectives
   end
 

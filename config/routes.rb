@@ -15,7 +15,5 @@ Rails.application.routes.draw do
     put     'tasks/:task_id/objectives/:id',    to: 'objectives#update'
     delete  'tasks/:task_id/objectives/:id',    to: 'objectives#destroy'
 
-    
-
   end
 end
