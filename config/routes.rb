@@ -9,11 +9,13 @@ Rails.application.routes.draw do
     put    'tasks/:id',          to: 'tasks#update'
     delete 'tasks/:id',          to: 'tasks#destroy'
 
-    get     'objectives',        to: 'objectives#index'
-    get     'objectives/:id',    to: 'objectives#show'
-    post    'objectives',        to: 'objectives#create'
-    put     'objectives/:id',    to: 'objectives#update'
-    delete  'objectived/:id',    to: 'objectives#drstroy'
+    get     'tasks/:task_id/objectives',        to: 'objectives#index'
+    get     'tasks/:task_id/objectives/:id',    to: 'objectives#show'
+    post    'tasks/:task_id/objectives',        to: 'objectives#create'
+    put     'tasks/:task_id/objectives/:id',    to: 'objectives#update'
+    delete  'tasks/:task_id/objectives/:id',    to: 'objectives#destroy'
+
+    
 
   end
 end
